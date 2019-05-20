@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-xs-10">
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+      
+<ul  *ngIf='ingridients;else info' class="list-group">
+
+
+  <a style='cursor:pointer' class="list-group-item"
+  *ngFor="let ing of ingridients"
+  >{{ing.name}} ({{ing.amount}})</a>
+
+</ul>
+<ng-template #info><h4>Start Adding Items</h4></ng-template>
+
+
+  </div>
+</div>
